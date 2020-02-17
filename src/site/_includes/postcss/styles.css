@@ -27,11 +27,14 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.8;
-  min-height: 100vh;
   background:  $page-color;
-  background: url(/images/bg-grid.png), linear-gradient(320deg, $page-color 0%, $accent-color 100%);
+  background: linear-gradient(320deg, $page-color 0%, $accent-color 100%);
 
-  @media (min-width: $narrow) {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  @media (min-width: $small) {
     font-size: 18px;
   };
 }
@@ -41,10 +44,12 @@ body {
   margin-right: auto;
   width: 90%;
   text-align: left;
-  @media (min-width: $mid) {
+  flex: 1;
+
+  @media (min-width: $medium) {
     width: 600px;
   };
-  @media (min-width: $wide) {
+  @media (min-width: $large) {
     width: 700px;
   };
 }
@@ -63,10 +68,10 @@ h1 {
   margin-bottom:0.2em;
   line-height: 1;
 
-  @media (min-width: $mid) {
+  @media (min-width: $medium) {
     font-size: 5em;
   };
-  @media (min-width: $wide) {
+  @media (min-width: $large) {
     font-size: 6em;
   };
 }
@@ -82,8 +87,12 @@ p {
   margin-bottom: 5em;
 }
 
-ul, ol {
+/* ul, ol {
   padding-left: 1em;
+} */
+
+ul, ol {
+  padding-left: 0;
 }
 
 a:link,
@@ -180,9 +189,9 @@ pre {
 
 
 footer {
-  margin-top: 6em;
-  padding-top: 4em;
-  padding-bottom: 6em;
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: mix($text-color, $accent-color, 10%);
@@ -199,4 +208,18 @@ footer {
     color: $text-color;
     border-bottom: solid 1px $text-color;
   }
+}
+
+.footer__container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: left;
+  
+  @media (min-width: $medium) {
+    width: 600px;
+  };
+  @media (min-width: $large) {
+    width: 700px;
+  };
 }

@@ -1,7 +1,8 @@
 /* breakpoints for media queries */
-$narrow: 400px;
-$mid: 740px;
-$wide: 1200px;
+$small: 400px;
+$medium: 740px;
+$large: 1200px;
+$xlarge: 1280px;
 
 /* colours */
 $page-color: #2424bb;
