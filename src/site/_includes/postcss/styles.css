@@ -45,6 +45,8 @@ body {
   width: 90%;
   text-align: left;
   flex: 1;
+  position: relative;
+  z-index: 2;
 
   @media (min-width: $medium) {
     width: 600px;
@@ -197,6 +199,8 @@ footer {
   border-top-color: mix($text-color, $accent-color, 10%);
   font-size: 0.7em;
   color: mix($text-color, $accent-color, 50%);
+  position: relative;
+  z-index: 2;
 
   a:link,
   a:visited {
@@ -231,13 +235,13 @@ footer {
 .shuttle {
   position: absolute;
   bottom: 0;
-  right: -500px;
+  right: 0;
   height: 100vh;
   width: 150vw;
-  background: url(/images/bg-shuttle.gif) no-repeat top;
-  background-size: 100%;
-  /* background-color: blue; */
+  background: url(/images/bg-shuttle.gif) no-repeat 70px 0;
+  background-size: 125%;
   opacity: .05;
+  z-index: 1;
 }
 
 
