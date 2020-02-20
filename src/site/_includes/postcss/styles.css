@@ -236,6 +236,38 @@ footer {
   width: 150vw;
   background: url(/images/bg-shuttle.gif) no-repeat top;
   background-size: 100%;
-  background-color: blue;
-  opacity: .1;
+  /* background-color: blue; */
+  opacity: .05;
+}
+
+
+/* Cycle background colors */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.color {
+  background: linear-gradient(335deg, #1C253C, #1f3e5a, #145051, #281c3c, #3c1c31);
+  background-size: 300% 300%;
+  box-sizing: border-box;
+  display: table;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  width: 100vw;
+  animation: Outerspace 25s ease infinite;
+}
+
+@-webkit-keyframes Outerspace {
+  0% {
+    background-position: 94% 100%; 
+  }
+  50% {
+    background-position: 50% 50%; 
+  }
+  100% {
+    background-position: 94% 0%; 
+  } 
 }
